@@ -29,29 +29,58 @@ def read_signal_file(file_path):
     with open(file_path, 'r') as file:
         signals = []
         signal = {}
+        affected_blocks = []
         for line in file:
             line = line.strip()
-            if "Begin:" in line:
+            if line.startswith('Number of affected blocks:'):
                 # Start of a new signal
                 if signal:
+                    signal['Affected Blocks'] = affected_blocks
                     signals.append(signal)
+                signal = {}
+                affected_blocks = []
+            if "Begin:" in line and 'End:' in line:
                 signal = {
-                    'Begin': line.split('Begin:')[1].split('Via 1:')[0].strip(),
-                    'Via 1': line.split('Via 1:')[1].split('Via 2:')[0].strip() if 'Via 1:' in line else '',
-                    'Via 2': line.split('Via 2:')[1].split('End:')[0].strip() if 'Via 2:' in line else '',
-                    'End': line.split('End:')[1].split('Speed release:')[0].strip(),
+                    'Begin': line.split('Begin:')[1].split('Via 1:')[0].strip().replace('"', ''),
+                    'Via 1': line.split('Via 1:')[1].split('Via 2:')[0].strip().replace('"', '') if 'Via 1:' in line else '',
+                    'Via 2': line.split('Via 2:')[1].split('End:')[0].strip().replace('"', '') if 'Via 2:' in line else '',
+                    'End': line.split('End:')[1].split('Speed release:')[0].strip().replace('"', ''),
                 }
+            elif line.startswith('Begin:'):
+                affected_block = {
+                    'Begin': line.split('Begin:')[1].split('Via 1:')[0].strip().replace('"', ''),
+                    'Via 1': line.split('Via 1:')[1].split('Via 2:')[0].strip().replace('"', '') if 'Via 1:' in line else '',
+                    'Via 2': line.split('Via 2:')[1].split('End:')[0].strip().replace('"', '') if 'Via 2:' in line else '',
+                    'End': line.split('End:')[1].split('Parent aspect:')[0].strip().replace('"', ''),
+                    'Parent aspect': line.split('Parent aspect:')[1].split('Trailing aspect:')[0].strip().replace('"', ''),
+                    'Trailing aspect': line.split('Trailing aspect:')[1].strip().replace('"', '')
+                }
+                affected_blocks.append(affected_block)
             else:
                 # Check each attribute in the dictionary
                 for attribute, key in signal_attributes.items():
                     if line.startswith(key):
-                        signal[attribute] = line.split(key)[1].strip()
+                        # Remove quotation marks from the value
+                        value = line.split(key)[1].strip().replace('"', '')
+                        signal[attribute] = value
                         break
+
+            # Call the function and print the signal S_237.500
+            if 'Begin' in signal and signal['Begin'] == 'S_237.500':
+                print(signal)
+
+        # ...
         # Append the last signal
         if signal:
+            signal['Affected Blocks'] = affected_blocks
             signals.append(signal)
-    return signals
 
+        # After collecting all signals, print the signal with 'Begin' as 'S_237.500'
+        for signal in signals:
+            if 'Begin' in signal and signal['Begin'] == 'S_237.500':
+                print(signal)
+
+        return signals
 
 
 def process_files(directory, experiment, block_length, milepost_start, milepost_end):
