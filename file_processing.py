@@ -65,23 +65,12 @@ def read_signal_file(file_path):
                         signal[attribute] = value
                         break
 
-            # Call the function and print the signal S_237.500
-            if 'Begin' in signal and signal['Begin'] == 'S_237.500':
-                print(signal)
+    # Append the last signal
+    if signal:
+        signal['Affected Blocks'] = affected_blocks
+        signals.append(signal)
 
-        # ...
-        # Append the last signal
-        if signal:
-            signal['Affected Blocks'] = affected_blocks
-            signals.append(signal)
-
-        # After collecting all signals, print the signal with 'Begin' as 'S_237.500'
-        for signal in signals:
-            if 'Begin' in signal and signal['Begin'] == 'S_237.500':
-                print(signal)
-
-        return signals
-
+    return signals  # Return all signals if 'S_237.500' is not found
 
 def process_files(directory, experiment, block_length, milepost_start, milepost_end):
     folder_path = str(directory)
