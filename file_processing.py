@@ -1,76 +1,55 @@
 import os
 from tkinter import messagebox
+import re
 
-def read_signal_file(file_path):
+def init_signal_dict():
     # Define a dictionary to map signal attributes to their keys
     signal_attributes = {
-        'Type of signal': 'Type of signal:',
-        'Direction': 'Direction:',
-        'Continuously lit': 'Continuously lit:',
-        'Mast orientation': 'Mast orientation:',
-        'Position relative to node': 'Position relative to node:',
-        'Most favorable aspect': 'Most favorable aspect:',
-        'Least favorable aspect': 'Least favorable aspect:',
-        'Interlocking wait aspect': 'Interlocking wait aspect:',
-        'Number of affected blocks': 'Number of affected blocks:',
-        'Direction change': 'Direction change:',
-        'Trailing signal direction(s)': 'Trailing signal direction(s):',
-        'Enabled': 'Enabled:',
-        'Diverging': 'Diverging:',
-        'Check favorable aspects for divergence': 'Check favorable aspects for divergence:',
-        'Virtual': 'Virtual:',
-        'Suppress warnings': 'Suppress warnings:',
-        'Allow guessing': 'Allow guessing:',
-        'SORS exception distance': 'SORS exception distance:',
-        'Latency time (MM:SS)': 'Latency time (MM:SS):',
-        'Number of heads': 'Number of heads:'
+        'Signal Number': r'(\d+)',
+        'Begin': r'Begin: (.*?) ',
+        'Via 1': r'Via 1: (.*?) ',
+        'Via 2': r'Via 2: (.*?) ',
+        'End': r'End: (.*?) ',
+        'Speed release': r'Speed release: (.*?) ',
+        'Type of signal': r'Type of signal: (\w+)',
+        'Enabled': r'Enabled:(\w+)',
+        'Direction': r'Direction: (\w+)',
+        'Diverging': r'Diverging: (\w+)',
+        'Check favorable aspects for divergence': r'Check favorable aspects for divergence: (\w+)',
+        'Continuously lit': r'Continuously lit: (\w+)',
+        'Mast orientation': r'Mast orientation: (\w+)',
+        'Position relative to node': r'Position relative to node: (\w+)',
+        'Most favorable aspect': r'Most favorable aspect: (\w+)',
+        'Least favorable aspect': r'Least favorable aspect: (\w+)',
+        'Interlocking wait aspect': r'Interlocking wait aspect: (\w+)',
+        'Number of affected blocks': r'Number of affected blocks: (\w+)',
+        'Direction change': r'Direction change: (\w+)',
+        'Trailing signal direction(s)': r'Trailing signal direction\(s\): (\w+)',
     }
+    return signal_attributes
 
+def read_signal_file(file_path, signal_attributes):
     with open(file_path, 'r') as file:
         signals = []
         signal = {}
-        affected_blocks = []
         for line in file:
             line = line.strip()
-            if line.startswith('Number of affected blocks:'):
-                # Start of a new signal
+            if line.startswith('---'):  # Start of a new signal
                 if signal:
-                    signal['Affected Blocks'] = affected_blocks
                     signals.append(signal)
                 signal = {}
-                affected_blocks = []
-            if "Begin:" in line and 'End:' in line:
-                signal = {
-                    'Begin': line.split('Begin:')[1].split('Via 1:')[0].strip().replace('"', ''),
-                    'Via 1': line.split('Via 1:')[1].split('Via 2:')[0].strip().replace('"', '') if 'Via 1:' in line else '',
-                    'Via 2': line.split('Via 2:')[1].split('End:')[0].strip().replace('"', '') if 'Via 2:' in line else '',
-                    'End': line.split('End:')[1].split('Speed release:')[0].strip().replace('"', ''),
-                }
-            elif line.startswith('Begin:'):
-                affected_block = {
-                    'Begin': line.split('Begin:')[1].split('Via 1:')[0].strip().replace('"', ''),
-                    'Via 1': line.split('Via 1:')[1].split('Via 2:')[0].strip().replace('"', '') if 'Via 1:' in line else '',
-                    'Via 2': line.split('Via 2:')[1].split('End:')[0].strip().replace('"', '') if 'Via 2:' in line else '',
-                    'End': line.split('End:')[1].split('Parent aspect:')[0].strip().replace('"', ''),
-                    'Parent aspect': line.split('Parent aspect:')[1].split('Trailing aspect:')[0].strip().replace('"', ''),
-                    'Trailing aspect': line.split('Trailing aspect:')[1].strip().replace('"', '')
-                }
-                affected_blocks.append(affected_block)
             else:
                 # Check each attribute in the dictionary
-                for attribute, key in signal_attributes.items():
-                    if line.startswith(key):
-                        # Remove quotation marks from the value
-                        value = line.split(key)[1].strip().replace('"', '')
-                        signal[attribute] = value
-                        break
+                for attribute, pattern in signal_attributes.items():
+                    match = re.search(pattern, line)
+                    if match:
+                        signal[attribute] = match.group(1)
+        # Append the last signal
+        if signal:
+            signals.append(signal)
+    print(signal)
+    return signals
 
-    # Append the last signal
-    if signal:
-        signal['Affected Blocks'] = affected_blocks
-        signals.append(signal)
-
-    return signals  # Return all signals if 'S_237.500' is not found
 
 def process_files(directory, experiment, block_length, milepost_start, milepost_end):
     folder_path = str(directory)
@@ -83,9 +62,11 @@ def process_files(directory, experiment, block_length, milepost_start, milepost_
     signal_file = os.path.join(folder_path, experiment_name + '.signal')
     node_file = os.path.join(folder_path, experiment_name + '.node')
     link_file = os.path.join(folder_path, experiment_name + '.link')
+    
+    signal_attributes = init_signal_dict()
 
     if os.path.exists(signal_file):
-        signals = read_signal_file(signal_file)
+        signals = read_signal_file(signal_file, signal_attributes)
         # TODO: modify signals based on milepost_ranges and other criteria
     else:
         signals = []
@@ -93,5 +74,5 @@ def process_files(directory, experiment, block_length, milepost_start, milepost_
 
     # TODO: read and process node and link files, similar to how we processed the signal file
     #print(signals)
-    print(signals)
+    
     messagebox.showinfo("Success", "Signal processing completed successfully")
