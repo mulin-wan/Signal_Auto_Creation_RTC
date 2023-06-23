@@ -2,17 +2,15 @@ import os
 from tkinter import messagebox
 import re
 
-import re
-
 def init_signal_dict():
     # Define a dictionary to map signal attributes to their keys
     signal_attributes = {
-        'Signal Number': r'^(\d+)',
-        'Begin': r'Begin: (.*?)\s{3}',
-        'Via 1': r'Via 1: (.*?)\s{3}',
-        'Via 2': r'Via 2: (.*?)\s{3}',
-        'End': r'End: (.*?)\s{3}',
-        'Speed release': r'Speed release: (.*?)\s{3}',
+        'Signal Number': r'---\s*(\d+)',
+        'Begin': r'Begin: (.*?)\s+Via 1:',
+        'Via 1': r'Via 1: (.*?)\s+Via 2:',
+        'Via 2': r'Via 2: (.*?)\s+End:',
+        'End': r'End: (.*?)\s+Speed release:',
+        'Speed release': r'Speed release: (.*?)\s*$',
         'Type of signal': r'Type of signal: (.*?)\s{3}',
         'Enabled': r'Enabled: (.*?)\s{3}',
         'Direction': r'Direction: (.*?)\s{3}',
@@ -36,13 +34,14 @@ def init_signal_dict():
     }
     return signal_attributes
 
+
 def read_signal_file(file_path, signal_attributes):
     with open(file_path, 'r') as file:
         signals = []
         signal = {}
         for line in file:
             line = line.strip()
-            if line.startswith('---'):  # Start of a new signal
+            if re.match(r'---\s*\d+', line):  # Start of a new signal
                 if signal:
                     signals.append(signal)
                 signal = {}
@@ -70,16 +69,13 @@ def read_signal_file(file_path, signal_attributes):
         # Append the last signal
         if signal:
             signals.append(signal)
-
     print(signal)
-
     return signals
 
 def print_signal(signals, signal_number):
     for signal in signals:
         if 'Signal Number' in signal and signal['Signal Number'] == str(signal_number):
             print(signal)
-
 
 
 def process_files(directory, experiment, block_length, milepost_start, milepost_end):
@@ -105,5 +101,5 @@ def process_files(directory, experiment, block_length, milepost_start, milepost_
 
     # TODO: read and process node and link files, similar to how we processed the signal file
     
-    # print_signal(signals, 0)
+    #print_signal(signals, 210)
     messagebox.showinfo("Success", "Signal processing completed successfully")
