@@ -1,88 +1,63 @@
 import os
 from tkinter import messagebox
+import numpy as np
 import re
 
-def init_signal_dict():
-    # Define a dictionary to map signal attributes to their keys
-    signal_attributes = {
-        'Signal Number': r'---\s*(\d+)',
-        'Begin': r'Begin: (.*?)\s+Via 1:',
-        'Via 1': r'Via 1: (.*?)\s+Via 2:',
-        'Via 2': r'Via 2: (.*?)\s+End:',
-        'End': r'End: (.*?)\s+Speed release:',
-        'Speed release': r'Speed release: (.*?)\s*$',
-        'Type of signal': r'Type of signal: (.*?)\s{3}',
-        'Enabled': r'Enabled: (.*?)\s{3}',
-        'Direction': r'Direction: (.*?)\s{3}',
-        'Diverging': r'Diverging: (.*?)\s{3}',
-        'Check favorable aspects for divergence': r'Check favorable aspects for divergence: (.*?)\s{3}',
-        'Continuously lit': r'Continuously lit: (.*?)\s{3}',
-        'Virtual': r'Virtual: (.*?)\s{3}',
-        'Mast orientation': r'Mast orientation: (.*?)\s{3}',
-        'Suppress warnings': r'Suppress warnings: (.*?)\s{3}',
-        'Position relative to node': r'Position relative to node: (.*?)\s{3}',
-        'Allow guessing': r'Allow guessing: (.*?)\s{3}',
-        'Most favorable aspect': r'Most favorable aspect: (.*?)\s{3}',
-        'SORS exception distance': r'SORS exception distance: (.*?)\s{5}',
-        'Least favorable aspect': r'Least favorable aspect: (.*?)\s{3}',
-        'Latency time (MM:SS)': r'Latency time \(MM:SS\): (\s*\d*:?\d*)',
-        'Interlocking wait aspect': r'Interlocking wait aspect: (.*?)\s{3}',
-        'Number of heads': r'Number of heads: (.*?)\s{3}',
-        'Number of affected blocks': r'Number of affected blocks: (.*?)\s{3}',
-        'Direction change': r'Direction change: (.*?)\s{3}',
-        'Trailing signal direction(s)': r'Trailing signal direction\(s\): (.*?)\s{3}',
-    }
-    return signal_attributes
-
-
-def read_signal_file(file_path, signal_attributes):
+def read_signal_file(file_path):
     with open(file_path, 'r') as file:
         signals = []
         signal = {}
+        signal_content = []
         for line in file:
             line = line.strip()
-            if re.match(r'---\s*\d+', line):  # Start of a new signal
-                if signal:
+            if line.startswith('---'):  # Start of a new signal
+                if signal:  # If there's an existing signal, append it to the list
+                    signal['Content'] = '\n'.join(signal_content)
                     signals.append(signal)
-                signal = {}
+                signal = {}  # Initialize a new signal
+                signal_content = []  # Reset signal content
+                next_line = file.readline().strip()  # Read the next line
+                match = re.search(r'(\d+)', next_line)  # Try to extract the signal number
+                if match:  # If a match was found
+                    signal_number = match.group(1)
+                    signal['Signal Number'] = signal_number
+                signal_content.append(next_line)  # Add the line to the signal content
             else:
-                # Check each attribute in the dictionary
-                for attribute, pattern in signal_attributes.items():
-                    match = re.search(pattern, line)
-                    if match:
-                        signal[attribute] = match.group(1)
-                # Check if the line is for affected blocks
-                affected_block_pattern = r'^(\d+)\s+Begin: (.*?)\s{3}Via 1: (.*?)\s{3}Via 2: (.*?)\s{3}End: (.*?)\s{3}Parent aspect: (.*?)\s{3}Trailing aspect: (.*?)\s{3}$'
-                match = re.search(affected_block_pattern, line)
-                if match:
-                    if 'Affected Blocks' not in signal:
-                        signal['Affected Blocks'] = []
-                    signal['Affected Blocks'].append({
-                        'Block Number': match.group(1),
-                        'Begin': match.group(2),
-                        'Via 1': match.group(3),
-                        'Via 2': match.group(4),
-                        'End': match.group(5),
-                        'Parent aspect': match.group(6),
-                        'Trailing aspect': match.group(7)
-                    })
+                signal_content.append(line)  # Add the line to the signal content
         # Append the last signal
         if signal:
+            signal['Content'] = '\n'.join(signal_content)
             signals.append(signal)
-    print(signal)
     return signals
 
-def print_signal(signals, signal_number):
+# Filter the signal between the inputed milepost range
+def filter_signals(signals, milepost_begin, milepost_end, block_length):
+    filtered_signals = []
+    # Convert the inputs to float
+    milepost_begin = float(milepost_begin)
+    milepost_end = float(milepost_end)
+    block_length = float(block_length)
+    # Check if block_length is zero
+    if block_length == 0:
+        print("Error: Block length cannot be zero.")
+        return
+    milepost_blocks = np.arange(milepost_begin, milepost_end + 1, block_length)
     for signal in signals:
-        if 'Signal Number' in signal and signal['Signal Number'] == str(signal_number):
-            print(signal)
+        # Check if 'Begin' key exists in signal
+        if 'Begin' in signal:
+            # Extract milepost from 'Begin' field
+            begin_milepost = float(signal['Begin'].split('_')[1])
+            # Check if the begin milepost is within the specified blocks
+            if any(block <= begin_milepost < block + block_length for block in milepost_blocks):
+                filtered_signals.append(signal)
+    return filtered_signals
 
 
-def process_files(directory, experiment, block_length, milepost_start, milepost_end):
+def process_files(directory, experiment, block_length, milepost_begin, milepost_end):
     folder_path = str(directory)
     experiment_name = str(experiment)
     nominal_signal_block_length = int(block_length)
-    milepost_A = float(milepost_start) if milepost_start else None
+    milepost_A = float(milepost_begin) if milepost_begin else None
     milepost_B = float(milepost_end) if milepost_end else None
     milepost_ranges = [(milepost_A, milepost_B)] if milepost_A and milepost_B else None
 
@@ -90,10 +65,10 @@ def process_files(directory, experiment, block_length, milepost_start, milepost_
     node_file = os.path.join(folder_path, experiment_name + '.node')
     link_file = os.path.join(folder_path, experiment_name + '.link')
     
-    signal_attributes = init_signal_dict()
-
     if os.path.exists(signal_file):
-        signals = read_signal_file(signal_file, signal_attributes)
+        signals = read_signal_file(signal_file)
+        filtered_signals = filter_signals(signals, milepost_begin, milepost_end, block_length)
+        print(filtered_signals)
         # TODO: modify signals based on milepost_ranges and other criteria
     else:
         signals = []

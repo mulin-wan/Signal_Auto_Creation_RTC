@@ -19,11 +19,11 @@ def setup_gui(root):
     block_length = StringVar()
     Entry(root, textvariable=block_length).grid(row=2, column=1)
 
-    Label(root, text='Milepost A').grid(row=3, column=0)
+    Label(root, text='Milepost Begin').grid(row=3, column=0)
     milepost_start = StringVar()
     Entry(root, textvariable=milepost_start).grid(row=3, column=1)
 
-    Label(root, text='Milepost B').grid(row=4, column=0)
+    Label(root, text='Milepost End').grid(row=4, column=0)
     milepost_end = StringVar()
     Entry(root, textvariable=milepost_end).grid(row=4, column=1)
 
