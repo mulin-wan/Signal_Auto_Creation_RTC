@@ -1,0 +1,381 @@
+ ------------------------------------- R T C   76V    S I G N A L    F I L E ----------------------------------------------------------------------------------------------------------------------
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2                   Begin: M_4.0000           Via 1:                    Via 2:                          End: M_6.0000             Speed release: M_6.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   4                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_1.9500           Via 1:                    Via 2:                      End: M_4.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_1.9500           Via 1:                    Via 2:                      End: M_4.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+3  Begin: S_1.9500           Via 1:                    Via 2:                      End: M_4.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+4  Begin: S_1.9500           Via 1:                    Via 2:                      End: M_4.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3                   Begin: M_6.0000           Via 1:                    Via 2:                          End: M_8.0000             Speed release: M_8.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_6.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_6.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4                   Begin: M_8.0000           Via 1:                    Via 2:                          End: M_10.0000            Speed release: M_10.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_6.0000           Via 1:                    Via 2:                      End: M_8.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_6.0000           Via 1:                    Via 2:                      End: M_8.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6                   Begin: M_10.0000          Via 1:                    Via 2:                          End: M_12.0000            Speed release: M_12.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_8.0000           Via 1:                    Via 2:                      End: M_10.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_8.0000           Via 1:                    Via 2:                      End: M_10.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7                   Begin: M_12.0000          Via 1:                    Via 2:                          End: M_13.9500            Speed release: M_13.9500
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 2
+Number of affected blocks:   5                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Stop                      Trailing aspect: Approach 45/30
+2  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+3  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+4  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Div approach 45/30        Trailing aspect: Adv approach
+5  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Div adv approach          Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8                   Begin: M_12.0000          Via 1:                    Via 2:                          End: S_13.9500            Speed release: S_13.9500
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Eastward                                 Diverging: YES    Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Div clear                  SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 2
+Number of affected blocks:   5                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Stop                      Trailing aspect: Approach 45/30
+2  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+3  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+4  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Div approach 45/30        Trailing aspect: Adv approach
+5  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_12.0000          Parent aspect: Div adv approach          Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9                   Begin: M_13.9500          Via 1:                    Via 2:                          End: M_16.0000            Speed release: M_16.0000
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 1
+Number of affected blocks:   3                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_12.0000          Via 1:                    Via 2:                      End: M_13.9500          Parent aspect: Stop                      Trailing aspect: Approach 45/30
+2  Begin: M_12.0000          Via 1:                    Via 2:                      End: M_13.9500          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+3  Begin: M_12.0000          Via 1:                    Via 2:                      End: M_13.9500          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10                   Begin: M_16.0000          Via 1:                    Via 2:                          End: M_18.0000            Speed release: M_18.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   4                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_13.9500          Via 1:                    Via 2:                      End: M_16.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_13.9500          Via 1:                    Via 2:                      End: M_16.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+3  Begin: S_13.9500          Via 1:                    Via 2:                      End: M_16.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+4  Begin: S_13.9500          Via 1:                    Via 2:                      End: M_16.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11                   Begin: M_18.0000          Via 1:                    Via 2:                          End: M_20.0000            Speed release: M_20.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_18.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_18.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12                   Begin: M_20.0000          Via 1:                    Via 2:                          End: M_22.0000            Speed release: M_22.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_18.0000          Via 1:                    Via 2:                      End: M_20.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_18.0000          Via 1:                    Via 2:                      End: M_20.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13                   Begin: M_22.0000          Via 1:                    Via 2:                          End: M_24.0000            Speed release: M_24.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_20.0000          Via 1:                    Via 2:                      End: M_22.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_20.0000          Via 1:                    Via 2:                      End: M_22.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+58                   Begin: S_13.9500          Via 1:                    Via 2:                          End: M_16.0000            Speed release: M_16.0000
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 1
+Number of affected blocks:   3                               Direction change: NO               Trailing signal direction(s): E
+1  Begin: M_12.0000          Via 1:                    Via 2:                      End: S_13.9500          Parent aspect: Stop                      Trailing aspect: Div approach 45/30
+2  Begin: M_12.0000          Via 1:                    Via 2:                      End: S_13.9500          Parent aspect: Approach 45/30            Trailing aspect: Div adv approach
+3  Begin: M_12.0000          Via 1:                    Via 2:                      End: S_13.9500          Parent aspect: Adv approach              Trailing aspect: Div clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+159                   Begin: M_2.0000           Via 1:                    Via 2:                          End: M_0.0000             Speed release: M_0.0000
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 2
+Number of affected blocks:   5                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Stop                      Trailing aspect: Approach 45/30
+2  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+3  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+4  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Div approach 45/30        Trailing aspect: Adv approach
+5  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Div adv approach          Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+160                   Begin: M_2.0000           Via 1:                    Via 2:                          End: S_0.0000             Speed release: S_0.0000
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Westward                                 Diverging: YES    Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Div clear                  SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 2
+Number of affected blocks:   5                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Stop                      Trailing aspect: Approach 45/30
+2  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+3  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+4  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Div approach 45/30        Trailing aspect: Adv approach
+5  Begin: M_4.0000           Via 1:                    Via 2:                      End: M_2.0000           Parent aspect: Div adv approach          Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+161                   Begin: M_4.0000           Via 1:                    Via 2:                          End: M_2.0000             Speed release: M_2.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_6.0000           Via 1:                    Via 2:                      End: M_4.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_6.0000           Via 1:                    Via 2:                      End: M_4.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+162                   Begin: M_6.0000           Via 1:                    Via 2:                          End: M_4.0000             Speed release: M_4.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_8.0000           Via 1:                    Via 2:                      End: M_6.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_8.0000           Via 1:                    Via 2:                      End: M_6.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+163                   Begin: M_8.0000           Via 1:                    Via 2:                          End: M_6.0000             Speed release: M_6.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_8.0000           Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_10.0000          Via 1:                    Via 2:                      End: M_8.0000           Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+164                   Begin: M_10.0000          Via 1:                    Via 2:                          End: M_8.0000             Speed release: M_8.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   4                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_12.0500          Via 1:                    Via 2:                      End: M_10.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_12.0500          Via 1:                    Via 2:                      End: M_10.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+3  Begin: S_12.0500          Via 1:                    Via 2:                      End: M_10.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+4  Begin: S_12.0500          Via 1:                    Via 2:                      End: M_10.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+165                   Begin: M_12.0500          Via 1:                    Via 2:                          End: M_10.0000            Speed release: M_10.0000
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 1
+Number of affected blocks:   3                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_14.0000          Via 1:                    Via 2:                      End: M_12.0500          Parent aspect: Stop                      Trailing aspect: Approach 45/30
+2  Begin: M_14.0000          Via 1:                    Via 2:                      End: M_12.0500          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+3  Begin: M_14.0000          Via 1:                    Via 2:                      End: M_12.0500          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+166                   Begin: M_14.0000          Via 1:                    Via 2:                          End: M_12.0500            Speed release: M_12.0500
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 2
+Number of affected blocks:   5                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Stop                      Trailing aspect: Approach 45/30
+2  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+3  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+4  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Div approach 45/30        Trailing aspect: Adv approach
+5  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Div adv approach          Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+167                   Begin: M_14.0000          Via 1:                    Via 2:                          End: S_12.0500            Speed release: S_12.0500
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Westward                                 Diverging: YES    Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Div clear                  SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 2
+Number of affected blocks:   5                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Stop                      Trailing aspect: Approach 45/30
+2  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+3  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+4  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Div approach 45/30        Trailing aspect: Adv approach
+5  Begin: M_16.0000          Via 1:                    Via 2:                      End: M_14.0000          Parent aspect: Div adv approach          Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+168                   Begin: M_16.0000          Via 1:                    Via 2:                          End: M_14.0000            Speed release: M_14.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_18.0000          Via 1:                    Via 2:                      End: M_16.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_18.0000          Via 1:                    Via 2:                      End: M_16.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+169                   Begin: M_18.0000          Via 1:                    Via 2:                          End: M_16.0000            Speed release: M_16.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_20.0000          Via 1:                    Via 2:                      End: M_18.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_20.0000          Via 1:                    Via 2:                      End: M_18.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+170                   Begin: M_20.0000          Via 1:                    Via 2:                          End: M_18.0000            Speed release: M_18.0000
+Type of signal: PERMISSIVE                                 Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: LEAST RESTRICTIVE                          Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Restricting 20                Latency time (MM:SS):   :01
+Interlocking wait aspect: Restricting 20                     Number of heads: 1
+Number of affected blocks:   2                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_22.0000          Via 1:                    Via 2:                      End: M_20.0000          Parent aspect: Approach 45/30            Trailing aspect: Adv approach
+2  Begin: M_22.0000          Via 1:                    Via 2:                      End: M_20.0000          Parent aspect: Adv approach              Trailing aspect: Clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+217                   Begin: S_12.0500          Via 1:                    Via 2:                          End: M_10.0000            Speed release: M_10.0000
+Type of signal: ABSOLUTE                                   Enabled: YES
+Direction: Westward                                 Diverging: NO     Check favorable aspects for divergence: YES
+Continuously lit: MOST RESTRICTIVE                           Virtual: NO
+Mast orientation: HORIZONTAL ONLY                  Suppress warnings: NO
+Position relative to node: RIGHT                               Allow guessing: YES
+Most favorable aspect: Clear                      SORS exception distance:     0
+Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+Interlocking wait aspect: Stop                               Number of heads: 1
+Number of affected blocks:   3                               Direction change: NO               Trailing signal direction(s): W
+1  Begin: M_14.0000          Via 1:                    Via 2:                      End: S_12.0500          Parent aspect: Stop                      Trailing aspect: Div approach 45/30
+2  Begin: M_14.0000          Via 1:                    Via 2:                      End: S_12.0500          Parent aspect: Approach 45/30            Trailing aspect: Div adv approach
+3  Begin: M_14.0000          Via 1:                    Via 2:                      End: S_12.0500          Parent aspect: Adv approach              Trailing aspect: Div clear
+
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

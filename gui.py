@@ -20,11 +20,11 @@ def setup_gui(root):
     Entry(root, textvariable=block_length).grid(row=2, column=1)
 
     Label(root, text='Milepost Begin').grid(row=3, column=0)
-    milepost_start = StringVar()
-    Entry(root, textvariable=milepost_start).grid(row=3, column=1)
+    milepost_begin = StringVar()
+    Entry(root, textvariable=milepost_begin).grid(row=3, column=1)
 
     Label(root, text='Milepost End').grid(row=4, column=0)
     milepost_end = StringVar()
     Entry(root, textvariable=milepost_end).grid(row=4, column=1)
 
-    Button(root, text="Process Files", command=lambda: process_files(directory.get(), experiment.get(), block_length.get(), milepost_start.get(), milepost_end.get())).grid(row=5, column=1)
+    Button(root, text="Process Files", command=lambda: process_files(directory.get(), experiment.get(), block_length.get(), milepost_begin.get(), milepost_end.get())).grid(row=5, column=1)
