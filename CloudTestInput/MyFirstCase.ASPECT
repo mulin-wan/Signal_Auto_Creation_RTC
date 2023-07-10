@@ -1,0 +1,325 @@
+ ------------------------------------- R T C   76V    A S P E C T    F I L E ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                          Name: Clear                   
+                  Abbreviation: Clear       
+                    Indication: Proceed at maximum authorized track speed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   1
+        RTC logical equivalent: CLEAR                           
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: NON-DIVERGING ONLY              
+                       Bearing: NOT APPLICABLE                  
+             Single head color: DK
+                Top head color: DK
+             Bottom head color: FY
+        Control line RTC color: 10
+                Passing speeds: PSG= 999  EXP= 999  FRT= 999  TGO= 999  DIM= 999  HVY= 999
+             Prescribed speeds: PSG= 999  EXP= 999  FRT= 999  TGO= 999  DIM= 999  HVY= 999
+                 Target speeds: PSG= 999  EXP= 999  FRT= 999  TGO= 999  DIM= 999  HVY= 999
+              Target adherence: NO 
+     Include in guess sequence: YES
+          Trailing repetitions:   0
+       Trailing guess sort key:   1
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Div clear               
+                  Abbreviation: DivClear    
+                    Indication: Proceed on diverging route not exceeding prescribed speed through turnout.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   2
+        RTC logical equivalent: DIVERGING CLEAR                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: DIVERGING ONLY                  
+                       Bearing: NOT APPLICABLE                  
+             Single head color: FB
+                Top head color: FY
+             Bottom head color: DK
+        Control line RTC color: 10
+                Passing speeds: PSG= 999  EXP= 999  FRT= 999  TGO= 999  DIM= 999  HVY= 999
+             Prescribed speeds: PSG= 999  EXP= 999  FRT= 999  TGO= 999  DIM= 999  HVY= 999
+                 Target speeds: PSG= 999  EXP= 999  FRT= 999  TGO= 999  DIM= 999  HVY= 999
+              Target adherence: NO 
+     Include in guess sequence: YES
+          Trailing repetitions:   0
+       Trailing guess sort key:   2
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Approach 60             
+                  Abbreviation: App60       
+                    Indication: Proceed prepared to pass next signal not exceeding applicable speed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   3
+        RTC logical equivalent:                                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: NON-DIVERGING ONLY              
+                       Bearing: NOT APPLICABLE                  
+             Single head color: G 
+                Top head color: G 
+             Bottom head color: FY
+        Control line RTC color: 11
+                Passing speeds: PSG=  60  EXP=  60  FRT=  60  TGO=  60  DIM=  60  HVY=  60
+             Prescribed speeds: PSG=  60  EXP=  60  FRT=  60  TGO=  60  DIM=  60  HVY=  60
+                 Target speeds: PSG=  60  EXP=  60  FRT=  60  TGO=  60  DIM=  60  HVY=  60
+              Target adherence: NO 
+     Include in guess sequence: NO 
+          Trailing repetitions:   0
+       Trailing guess sort key:   3
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Div approach 60         
+                  Abbreviation: DivApp60    
+                    Indication: Proceed prepared to pass next signal not exceeding applicable speed and to advance on diverging route.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   4
+        RTC logical equivalent:                                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: DIVERGING ONLY                  
+                       Bearing: NOT APPLICABLE                  
+             Single head color: FB
+                Top head color: FY
+             Bottom head color: G 
+        Control line RTC color: 11
+                Passing speeds: PSG=  60  EXP=  60  FRT=  60  TGO=  60  DIM=  60  HVY=  60
+             Prescribed speeds: PSG=  60  EXP=  60  FRT=  60  TGO=  60  DIM=  60  HVY=  60
+                 Target speeds: PSG=  60  EXP=  60  FRT=  60  TGO=  60  DIM=  60  HVY=  60
+              Target adherence: NO 
+     Include in guess sequence: NO 
+          Trailing repetitions:   0
+       Trailing guess sort key:   4
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Approach 50/40          
+                  Abbreviation: App50/40    
+                    Indication: Proceed prepared to pass next signal not exceeding applicable speed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   5
+        RTC logical equivalent:                                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: NON-DIVERGING ONLY              
+                       Bearing: NOT APPLICABLE                  
+             Single head color: Y 
+                Top head color: Y 
+             Bottom head color: FY
+        Control line RTC color: 15
+                Passing speeds: PSG=  50  EXP=  40  FRT=  40  TGO=  50  DIM=  40  HVY=  40
+             Prescribed speeds: PSG=  50  EXP=  40  FRT=  40  TGO=  50  DIM=  40  HVY=  40
+                 Target speeds: PSG=  50  EXP=  40  FRT=  40  TGO=  50  DIM=  40  HVY=  40
+              Target adherence: NO 
+     Include in guess sequence: YES
+          Trailing repetitions:   0
+       Trailing guess sort key:   5
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Div approach 50/40      
+                  Abbreviation: DivApp50/40 
+                    Indication: Proceed prepared to pass next signal not exceeding applicable speed and to advance on diverging route.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   6
+        RTC logical equivalent:                                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: DIVERGING ONLY                  
+                       Bearing: NOT APPLICABLE                  
+             Single head color: FB
+                Top head color: FY
+             Bottom head color: Y 
+        Control line RTC color: 15
+                Passing speeds: PSG=  50  EXP=  40  FRT=  40  TGO=  50  DIM=  40  HVY=  40
+             Prescribed speeds: PSG=  50  EXP=  40  FRT=  40  TGO=  50  DIM=  40  HVY=  40
+                 Target speeds: PSG=  50  EXP=  40  FRT=  40  TGO=  50  DIM=  40  HVY=  40
+              Target adherence: NO 
+     Include in guess sequence: YES
+          Trailing repetitions:   0
+       Trailing guess sort key:   6
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Approach 40/30          
+                  Abbreviation: App40/30    
+                    Indication: Proceed prepared to pass next signal not exceeding applicable speed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   7
+        RTC logical equivalent:                                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: NON-DIVERGING ONLY              
+                       Bearing: NOT APPLICABLE                  
+             Single head color: FG
+                Top head color: FG
+             Bottom head color: FY
+        Control line RTC color: 15
+                Passing speeds: PSG=  40  EXP=  30  FRT=  30  TGO=  40  DIM=  30  HVY=  30
+             Prescribed speeds: PSG=  40  EXP=  30  FRT=  30  TGO=  40  DIM=  30  HVY=  30
+                 Target speeds: PSG=  40  EXP=  30  FRT=  30  TGO=  40  DIM=  30  HVY=  30
+              Target adherence: NO 
+     Include in guess sequence: YES
+          Trailing repetitions:   0
+       Trailing guess sort key:   7
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Div approach 40/30      
+                  Abbreviation: DivApp40/30 
+                    Indication: Proceed prepared to pass next signal not exceeding applicable speed and to advance on diverging route.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   8
+        RTC logical equivalent:                                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: DIVERGING ONLY                  
+                       Bearing: NOT APPLICABLE                  
+             Single head color: FB
+                Top head color: FY
+             Bottom head color: FG
+        Control line RTC color: 15
+                Passing speeds: PSG=  40  EXP=  30  FRT=  30  TGO=  40  DIM=  30  HVY=  30
+             Prescribed speeds: PSG=  40  EXP=  30  FRT=  30  TGO=  40  DIM=  30  HVY=  30
+                 Target speeds: PSG=  40  EXP=  30  FRT=  30  TGO=  40  DIM=  30  HVY=  30
+              Target adherence: NO 
+     Include in guess sequence: YES
+          Trailing repetitions:   0
+       Trailing guess sort key:   8
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Restricting 20          
+                  Abbreviation: Res20       
+                    Indication: Proceed at applicable restricted speed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:   9
+        RTC logical equivalent:                                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: NON-DIVERGING ONLY              
+                       Bearing: NOT APPLICABLE                  
+             Single head color: L 
+                Top head color: L 
+             Bottom head color: FY
+        Control line RTC color: 14
+                Passing speeds: PSG=  20  EXP=  20  FRT=  20  TGO=  20  DIM=  20  HVY=  20
+             Prescribed speeds: PSG=  20  EXP=  20  FRT=  20  TGO=  20  DIM=  20  HVY=  20
+                 Target speeds: PSG=  20  EXP=  20  FRT=  20  TGO=  20  DIM=  20  HVY=  20
+              Target adherence: NO 
+     Include in guess sequence: NO 
+          Trailing repetitions:   0
+       Trailing guess sort key:   9
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Div restricting 20      
+                  Abbreviation: DivRes20    
+                    Indication: Proceed on diverging route at applicable restricted speed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:  10
+        RTC logical equivalent:                                 
+        Applicable signal type: EITHER ABSOLUTE or PERMISSIVE   
+     Diverging / Non-diverging: DIVERGING ONLY                  
+                       Bearing: NOT APPLICABLE                  
+             Single head color: FB
+                Top head color: FY
+             Bottom head color: L 
+        Control line RTC color: 14
+                Passing speeds: PSG=  20  EXP=  20  FRT=  20  TGO=  20  DIM=  20  HVY=  20
+             Prescribed speeds: PSG=  20  EXP=  20  FRT=  20  TGO=  20  DIM=  20  HVY=  20
+                 Target speeds: PSG=  20  EXP=  20  FRT=  20  TGO=  20  DIM=  20  HVY=  20
+              Target adherence: NO 
+     Include in guess sequence: NO 
+          Trailing repetitions:   0
+       Trailing guess sort key:  10
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Stop and proceed        
+                  Abbreviation: Stop&proceed
+                    Indication: Stop and proceed at applicable restricted speed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:  11
+        RTC logical equivalent: STOP and PROCEED                
+        Applicable signal type: PERMISSIVE ONLY                 
+     Diverging / Non-diverging: NOT APPLICABLE                  
+                       Bearing: NOT APPLICABLE                  
+             Single head color: R 
+                Top head color: R 
+             Bottom head color: FY
+        Control line RTC color: 12
+                Passing speeds: PSG=   0  EXP=   0  FRT=   0  TGO=   0  DIM=   0  HVY=   0
+             Prescribed speeds: PSG=  20  EXP=  20  FRT=  20  TGO=  20  DIM=  20  HVY=  20
+                 Target speeds: PSG=  20  EXP=  20  FRT=  20  TGO=  20  DIM=  20  HVY=  20
+              Target adherence: NO 
+     Include in guess sequence: YES
+          Trailing repetitions:   0
+       Trailing guess sort key:  11
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 
+                          Name: Stop                    
+                  Abbreviation: Stop        
+                    Indication: Stop before any part of train or engine passes the signal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                        Active: YES
+                  Group number:  0
+                      ATC code:         
+              ATC / Fixed flag: BOTH
+                    List index:  12
+        RTC logical equivalent: STOP                            
+        Applicable signal type: ABSOLUTE ONLY                   
+     Diverging / Non-diverging: NOT APPLICABLE                  
+                       Bearing: NOT APPLICABLE                  
+             Single head color: FY
+                Top head color: FY
+             Bottom head color: FY
+        Control line RTC color: 12
+                Passing speeds: PSG=   0  EXP=   0  FRT=   0  TGO=   0  DIM=   0  HVY=   0
+             Prescribed speeds: PSG=   0  EXP=   0  FRT=   0  TGO=   0  DIM=   0  HVY=   0
+                 Target speeds: PSG=   0  EXP=   0  FRT=   0  TGO=   0  DIM=   0  HVY=   0
+              Target adherence: NO 
+     Include in guess sequence: YES
+          Trailing repetitions:   0
+       Trailing guess sort key:  12
+     Trailing diverging aspect:                                                              
+ Trailing non-diverging aspect:                                                              
+    Trailing permissive aspect:                                                              
+ 

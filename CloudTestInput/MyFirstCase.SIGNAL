@@ -1,0 +1,85 @@
+ ------------------------------------- R T C   76V    S I G N A L    F I L E ----------------------------------------------------------------------------------------------------------------------
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     1                   Begin: 712                Via 1:                    Via 2:                          End: 2090                 Speed release: 2090        
+                Type of signal: PERMISSIVE                                 Enabled: YES
+                     Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+              Continuously lit: DARK                                       Virtual: NO 
+              Mast orientation: RTC CHOOSE                       Suppress warnings: NO 
+     Position relative to node: RIGHT                               Allow guessing: YES
+         Most favorable aspect: Clear                      SORS exception distance:     0
+        Least favorable aspect: Stop and proceed              Latency time (MM:SS):   :01
+      Interlocking wait aspect: Stop and proceed                   Number of heads: 1
+     Number of affected blocks:   0                               Direction change: NO               Trailing signal direction(s): E    
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     2                   Begin: 2090               Via 1:                    Via 2:                          End: 2435                 Speed release: 2435        
+                Type of signal: ABSOLUTE                                   Enabled: YES
+                     Direction: Eastward                                 Diverging: YES    Check favorable aspects for divergence: YES
+              Continuously lit: DARK                                       Virtual: NO 
+              Mast orientation: RTC CHOOSE                       Suppress warnings: NO 
+     Position relative to node: RIGHT                               Allow guessing: YES
+         Most favorable aspect: Div clear                  SORS exception distance:     0
+        Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+      Interlocking wait aspect: Stop                               Number of heads: 1
+     Number of affected blocks:   0                               Direction change: NO               Trailing signal direction(s): E    
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     3                   Begin: 2090               Via 1:                    Via 2:                          End: 2473                 Speed release: 2473        
+                Type of signal: PERMISSIVE                                 Enabled: YES
+                     Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+              Continuously lit: DARK                                       Virtual: NO 
+              Mast orientation: RTC CHOOSE                       Suppress warnings: NO 
+     Position relative to node: RIGHT                               Allow guessing: YES
+         Most favorable aspect: Clear                      SORS exception distance:     0
+        Least favorable aspect: Stop and proceed              Latency time (MM:SS):   :01
+      Interlocking wait aspect: Stop and proceed                   Number of heads: 1
+     Number of affected blocks:   0                               Direction change: NO               Trailing signal direction(s): E    
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     4                   Begin: 2090               Via 1:                    Via 2:                          End: #2492                Speed release: #2492       
+                Type of signal: ABSOLUTE                                   Enabled: YES
+                     Direction: Eastward                                 Diverging: YES    Check favorable aspects for divergence: YES
+              Continuously lit: DARK                                       Virtual: NO 
+              Mast orientation: RTC CHOOSE                       Suppress warnings: NO 
+     Position relative to node: RIGHT                               Allow guessing: YES
+         Most favorable aspect: Div clear                  SORS exception distance:     0
+        Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+      Interlocking wait aspect: Stop                               Number of heads: 1
+     Number of affected blocks:   0                               Direction change: NO               Trailing signal direction(s): E    
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     5                   Begin: 2435               Via 1:                    Via 2:                          End: 2509                 Speed release: 2509        
+                Type of signal: ABSOLUTE                                   Enabled: YES
+                     Direction: Eastward                                 Diverging: NO     Check favorable aspects for divergence: YES
+              Continuously lit: DARK                                       Virtual: NO 
+              Mast orientation: RTC CHOOSE                       Suppress warnings: NO 
+     Position relative to node: RIGHT                               Allow guessing: YES
+         Most favorable aspect: Clear                      SORS exception distance:     0
+        Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+      Interlocking wait aspect: Stop                               Number of heads: 2
+     Number of affected blocks:   0                               Direction change: NO               Trailing signal direction(s): E    
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     6                   Begin: 2435               Via 1:                    Via 2:                          End: #2509                Speed release: #2509       
+                Type of signal: ABSOLUTE                                   Enabled: YES
+                     Direction: Eastward                                 Diverging: YES    Check favorable aspects for divergence: YES
+              Continuously lit: DARK                                       Virtual: NO 
+              Mast orientation: RTC CHOOSE                       Suppress warnings: NO 
+     Position relative to node: RIGHT                               Allow guessing: YES
+         Most favorable aspect: Div clear                  SORS exception distance:     0
+        Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+      Interlocking wait aspect: Stop                               Number of heads: 2
+     Number of affected blocks:   0                               Direction change: NO               Trailing signal direction(s): E    
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     7                   Begin: 2473               Via 1:                    Via 2:                          End: #2509                Speed release: #2509       
+                Type of signal: ABSOLUTE                                   Enabled: YES
+                     Direction: Eastward                                 Diverging: YES    Check favorable aspects for divergence: YES
+              Continuously lit: DARK                                       Virtual: NO 
+              Mast orientation: RTC CHOOSE                       Suppress warnings: NO 
+     Position relative to node: RIGHT                               Allow guessing: YES
+         Most favorable aspect: Div clear                  SORS exception distance:     0
+        Least favorable aspect: Stop                          Latency time (MM:SS):   :01
+      Interlocking wait aspect: Stop                               Number of heads: 2
+     Number of affected blocks:   0                               Direction change: NO               Trailing signal direction(s): E    

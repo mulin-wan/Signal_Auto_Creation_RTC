@@ -1,0 +1,784 @@
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+          R T C   Version   76V    Debug File             Date: 13 June 2023   18:27:31
+
+ ----------------------------------------------------------------------------------------------------------------------------------
+
+ RTC detects the Windows system directory to be: C:\Windows
+ RTC GUI version date: 28-08-2015
+  Manual file C:\RTC\RTC.CHM is present.
+
+ User name: Mike Copley  3
+ Organization: University of Illinois
+
+ Ethernet physical address: 18-66-DA-04-34-6D
+ Disk volume serial number: 6E66-4A02
+ FPU control word 027F
+
+
+ Case: MyFirstCase
+
+
+ Reading the input file: C:\RTC\MULIN_TEST\MyFirstCase.INPUT                                                                                                                                                                                                                                                                    
+  Default case prefix: C:\RTC\Mulin_Test\
+  10                       Option file: C:\RTC\MULIN_TEST\MyFirstCase.OPTION
+  11                        Label file: C:\RTC\MULIN_TEST\MyFirstCase.LABEL
+  12                     Division file: C:\RTC\MULIN_TEST\MyFirstCase.DIVISION
+  13                         Crew file: C:\RTC\MULIN_TEST\MyFirstCase.CREW
+  15                         Node file: C:\RTC\MULIN_TEST\MyFirstCase.NODE
+  16                         Link file: C:\RTC\MULIN_TEST\MyFirstCase.LINK
+  17                     Equation file: C:\RTC\MULIN_TEST\MyFirstCase.EQUATION
+  18                         Line file: C:\RTC\MULIN_TEST\MyFirstCase.LINE
+  19                Signal aspect file: C:\RTC\MULIN_TEST\MyFirstCase.ASPECT
+  20                 Signal block file: C:\RTC\MULIN_TEST\MyFirstCase.SIGNAL
+  21                       Permit file: C:\RTC\MULIN_TEST\MyFirstCase.PERMIT
+  22                 Railway locations: C:\RTC\MULIN_TEST\MyFirstCase.LOCATION
+  23              Track occupancy file: C:\RTC\MULIN_TEST\MyFirstCase.TOC
+  24                   Locomotive file: C:\RTC\MULIN_TEST\MyFirstCase.LOCO
+  25                        Fleet file: C:\RTC\MULIN_TEST\MyFirstCase.FLEET
+  26                    Run-times file: C:\RTC\MULIN_TEST\MyFirstCase.RUNTIMES
+  27                        Train file: C:\RTC\MULIN_TEST\MyFirstCase.TRAIN
+  28                   Field data file: C:\RTC\MULIN_TEST\MyFirstCase.FIELD
+  32                    Geography file: C:\RTC\MULIN_TEST\MyFirstCase.GEOGRAPHY
+  33                  Environment file: C:\RTC\MULIN_TEST\MyFirstCase.ENVIRONMENT
+  34                       PTC options: C:\RTC\MULIN_TEST\MyFirstCase.PTC_OPTION
+  35              Node conversion file: C:\RTC\MULIN_TEST\MyFirstCase.NODECONVERT
+  36         Node name conversion file: C:\RTC\MULIN_TEST\MyFirstCase.NAMECONVERT
+  93                    NYC train file: C:\RTC\MULIN_TEST\MyFirstCase.NYC_TRAIN
+  94                    NYC cycle file: C:\RTC\MULIN_TEST\MyFirstCase.NYC_CYCLE
+  41                    Timetable file: C:\RTC\MULIN_TEST\MyFirstCase.TIMETBL
+
+  43                 Train routes file: C:\RTC\MULIN_TEST\MyFirstCase.ROUTE
+  44           Train statistics report: C:\RTC\MULIN_TEST\MyFirstCase.REPORT
+  45         Summary statistics report: C:\RTC\MULIN_TEST\MyFirstCase.SUMMARY
+  46                       TPC results: C:\RTC\MULIN_TEST\MyFirstCase.TPC
+  49                      History file: C:\RTC\MULIN_TEST\MyFirstCase.HISTORY
+  54                     Conflict file: C:\RTC\MULIN_TEST\MyFirstCase.CONFLICT
+  55                  Performance file: C:\RTC\MULIN_TEST\MyFirstCase.PERFORMANCE
+  56                    Arrival report: C:\RTC\MULIN_TEST\MyFirstCase.ARRIVAL
+  57            Case comparison report: C:\RTC\MULIN_TEST\MyFirstCase.COMPARE
+  58                      Noise report: C:\RTC\MULIN_TEST\MyFirstCase.NOISE
+  59              Environmental report: C:\RTC\MULIN_TEST\MyFirstCase.EZONE
+  60                      Dwell report: C:\RTC\MULIN_TEST\MyFirstCase.DWELL
+  61                       Wake report: C:\RTC\MULIN_TEST\MyFirstCase.WAKE
+  62                       Hold report: C:\RTC\MULIN_TEST\MyFirstCase.HOLD
+  63                      Delay report: C:\RTC\MULIN_TEST\MyFirstCase.DELAY
+  64                      SCRAM report: C:\RTC\MULIN_TEST\MyFirstCase.SCRAM
+  65                     Energy report: C:\RTC\MULIN_TEST\MyFirstCase.ENERGY
+  67                  Equipment report: C:\RTC\MULIN_TEST\MyFirstCase.EQUIPMENT
+  71                  PTC audit report: C:\RTC\MULIN_TEST\MyFirstCase.PTC_AUDIT
+  72                        PTC report: C:\RTC\MULIN_TEST\MyFirstCase.PTC_REPORT
+  75                Track profile file: C:\RTC\MULIN_TEST\MyFirstCase.PROFILE
+  76            Elevation profile file: C:\RTC\MULIN_TEST\MyFirstCase.ELEVATION
+  77                Curve profile file: C:\RTC\MULIN_TEST\MyFirstCase.CURVE
+
+ Reading the option file: C:\RTC\MULIN_TEST\MyFirstCase.OPTION                                                                                                                                                                                                                                                                  
+
+ >> Randomization suppressed due to negative random seed.
+
+  Random seed -1 chosen from option file.  Batch random seed is -1.
+ >Randomization not active for the case MyFirstCase 22MC because random seed is negative.
+  Random seed 1 has been set.
+
+ Reading the environment file: C:\RTC\MULIN_TEST\MyFirstCase.ENVIRONMENT                                                                                                                                                                                                                                                        
+
+ Reading the division file: C:\RTC\MULIN_TEST\MyFirstCase.DIVISION                                                                                                                                                                                                                                                              
+
+ Reading the crew file: C:\RTC\MULIN_TEST\MyFirstCase.CREW                                                                                                                                                                                                                                                                      
+
+ Reading the node file: C:\RTC\MULIN_TEST\MyFirstCase.NODE                                                                                                                                                                                                                                                                      
+
+  Not all nodes read are numeric.  Longest node number has  5 bytes.
+
+   Number of nodes =   47
+   Number of switches coded =   11
+   Number of diamonds coded =    0
+   Long node numbers ? Y
+
+ Reading the link file: C:\RTC\MULIN_TEST\MyFirstCase.LINK                                                                                                                                                                                                                                                                      
+ >   3.9% of the links have a hold time restriction
+
+   Prevailing low to high RTC marker direction is E.
+   Prevailing high to low RTC marker direction is W.
+  Number of powered crossovers = 6   Number of manual crossovers = 0
+  1 Adding legend speed  60 MPH
+  2 Adding legend speed  20 MPH
+  3 Adding legend speed  55 MPH
+  4 Adding legend speed  40 MPH
+  5 Adding legend speed  10 MPH
+  6 Adding legend speed  25 MPH
+  7 Adding legend speed  50 MPH
+  8 Adding legend speed  30 MPH
+  9 Adding legend speed  70 MPH
+  Legend speed  1 is  10 MPH
+  Legend speed  2 is  20 MPH
+  Legend speed  3 is  25 MPH
+  Legend speed  4 is  30 MPH
+  Legend speed  5 is  40 MPH
+  Legend speed  6 is  50 MPH
+  Legend speed  7 is  55 MPH
+  Legend speed  8 is  60 MPH
+  Legend speed  9 is  70 MPH
+
+ Reading the equation file: C:\RTC\MULIN_TEST\MyFirstCase.EQUATION                                                                                                                                                                                                                                                              
+  Switch node 2013 has normal alignment node 1975, which may be an invalid link class TURNOUT.
+  Switch node 2013 has normal alignment node 1975, which may be an invalid link class TURNOUT.
+  Switch node 2013 has reverse alignment node 1976, which may be an invalid link class INDUSTRY.
+  Switch node 2013 has reverse alignment node 1976, which may be an invalid link class INDUSTRY.
+  Slow-speed network.  Max PSG speed found is  70.0 MPH on link 2550 - 3775.
+
+                       Directional
+  Link class           Track Miles
+  --------------------------------
+  Foul                       0.880
+  Crossover                  0.220
+  Turnout                    0.480
+  Road Crossing              0.400
+  Bridge                     0.000
+  Controlled Siding          3.060
+  Dark Siding                0.000
+  Primary Main              25.880
+  Secondary Main             0.000
+  Tertiary Main              0.000
+  Dark Main                  0.000
+  Electric Power Gap         0.000
+  Diesel Power Gap           0.000
+  Passenger Station          0.000
+  Tunnel                     0.000
+  Interchange                0.000
+  Not-in-service             0.000
+  Storage                    0.000
+  Industry                   0.400
+  Private                    0.000
+  Yard                       0.000
+  Mine                       0.000
+  Port                       0.000
+                         ---------
+                            31.321
+
+             Directional
+  PSG MPH    Track Miles
+  ----------------------
+     10          0.400
+     20          0.200
+     25          3.521
+     30          0.200
+     40          2.540
+     55         11.600
+     60          9.860
+     70          3.000
+             ---------
+                31.321
+
+
+
+             Directional
+  EXP MPH    Track Miles
+  ----------------------
+     10          0.400
+     20          0.400
+     25          3.281
+     30          0.440
+     40          2.700
+     55         11.600
+     60          9.500
+     70          3.000
+             ---------
+                31.321
+
+
+
+             Directional
+  FRT MPH    Track Miles
+  ----------------------
+     10          0.400
+     20          0.400
+     25          3.281
+     30          0.440
+     40          2.700
+     55         11.600
+     60          9.500
+     70          3.000
+             ---------
+                31.321
+
+
+
+             Directional
+  TGO MPH    Track Miles
+  ----------------------
+     10          0.040
+     20          0.800
+     25          3.981
+     30          0.100
+     40          1.220
+     60         25.180
+             ---------
+                31.321
+
+
+
+             Directional
+  DIM MPH    Track Miles
+  ----------------------
+     10          0.040
+     20          4.741
+     30          0.340
+     40          1.380
+     50         23.760
+     60          1.060
+             ---------
+                31.321
+
+
+
+             Directional
+  HVY MPH    Track Miles
+  ----------------------
+     10          0.040
+     20          4.741
+     30          0.340
+     40          1.380
+     50         23.760
+     60          1.060
+             ---------
+                31.321
+
+
+
+ Reading the label file: C:\RTC\MULIN_TEST\MyFirstCase.LABEL                                                                                                                                                                                                                                                                    
+
+ Reading the line file: C:\RTC\MULIN_TEST\MyFirstCase.LINE                                                                                                                                                                                                                                                                      
+
+ Reading the signal aspect file: C:\RTC\MULIN_TEST\MyFirstCase.ASPECT                                                                                                                                                                                                                                                           
+  Default absolute non-diverging most favorable aspect is: Clear   1
+  Default absolute diverging most favorable aspect is: Div clear   2
+  Default absolute least favorable aspect is: Stop  12
+  Default permissive most favorable aspect is: Clear   1
+  Default permissive least favorable aspect is: Stop and proceed  11
+ >Both Div clear and Div approach 60 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div clear and Div approach 50/40 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div clear and Div approach 40/30 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div clear and Div restricting 20 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div approach 60 and Div approach 50/40 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div approach 60 and Div approach 40/30 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div approach 60 and Div restricting 20 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div approach 50/40 and Div approach 40/30 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div approach 50/40 and Div restricting 20 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+ >Both Div approach 40/30 and Div restricting 20 have the same single head display of Flashing Blue which is ambiguous in animation.
+
+  The file: C:\RTC\MULIN_TEST\MyFirstCase.ASPECT has 12 signal aspects defined.
+
+
+ Reading the signal block file: C:\RTC\MULIN_TEST\MyFirstCase.SIGNAL                                                                                                                                                                                                                                                            
+ Keyword format detected in signal file version   76V.
+  Pass 1 reading file C:\RTC\MULIN_TEST\MyFirstCase.SIGNAL complete with 7 signal blocks.
+  4 signal nodes define 7 signal blocks with 0 trailing signal aspects defined.
+  7 signal blocks have an average of 0 trailing affected signals.
+  7 signal blocks have a safe average of 1 trailing affected signals.
+
+
+Fixing trailing aspect inconsistencies for 7 signal blocks.
+
+ Reading the permit and occupancy file: C:\RTC\MULIN_TEST\MyFirstCase.PERMIT                                                                                                                                                                                                                                                    
+
+ Reading the railway location file: C:\RTC\MULIN_TEST\MyFirstCase.LOCATION                                                                                                                                                                                                                                                      
+
+ Reading the track occupancy file: C:\RTC\MULIN_TEST\MyFirstCase.TOC                                                                                                                                                                                                                                                            
+
+ Reading the locomotive file: C:\RTC\MULIN_TEST\MyFirstCase.LOCO                                                                                                                                                                                                                                                                
+  New format   76V locomotive file with     0 (up to 999) types detected.
+
+ Done reading 0 locomotives from: C:\RTC\MULIN_TEST\MyFirstCase.LOCO                                                                                                                                                                                                                                                            
+
+ Reading the fleet file: C:\RTC\MULIN_TEST\MyFirstCase.FLEET                                                                                                                                                                                                                                                                    
+
+ Reading the run-times file: C:\RTC\MULIN_TEST\MyFirstCase.RUNTIMES                                                                                                                                                                                                                                                             
+
+ Reading the train file: C:\RTC\MULIN_TEST\MyFirstCase.TRAIN                                                                                                                                                                                                                                                                    
+
+  Current input seed train is:
+  Current input run-time train is:
+  Current input train is:
+  Run-time train(s) not created during I/O.
+ 
+  No trains have early initial random departure requested.
+  No trains have late initial random departure requested.
+  No trains have random dwell requested.
+  No trains have TPC randomization requested.
+
+  Since the random seed number -1 is negative, all randomization will be suppressed.
+
+  No seed trains have initial head-end speed > 0
+
+  0 OTP measurement nodes.
+  0 seed trains with requested OTP measurement (by train type) and requested arrival times at OTP nodes.
+
+ Read the field file: C:\RTC\MULIN_TEST\MyFirstCase.FIELD                                                                                                                                                                                                                                                                        
+
+  No history file found with the filter C:\RTC\MULIN_TEST\MyFirstCase*.HISTORY.  History file name is C:\RTC\MULIN_TEST\MyFirstCase.HISTORY.
+
+  The requested display INTRODUCTION is valid.  Current screen: INTRODUCTION
+
+ The case: MyFirstCase has been read from disk successfully.
+
+
+  Network errors detected? NO
+  Signal errors detected? NO
+  Train cost/rank errors detected? NO
+  Seed train errors detected? NO
+  Track configuration assigned by user.  No guessing will be done.
+
+  The requested display INTRODUCTION is valid.  Current screen: INTRODUCTION
+  Suite 1 enabled: YES.  Name: Suite 1.  Folder with case files: C:\RTC\Mulin_Test
+  Suite 2 enabled: YES.  Name: Suite 2.  Folder with case files: C:\RTC
+  Suite 3 enabled: YES.  Name: Suite 3.  Folder with case files: C:\RTC
+  Suite 4 enabled: YES.  Name: Suite 4.  Folder with case files: C:\RTC
+  Suite 5 enabled: YES.  Name: Suite 5.  Folder with case files: C:\RTC
+  Suite 6 enabled: YES.  Name: Suite 6.  Folder with case files: C:\RTC
+  Suite 7 enabled: YES.  Name: Suite 7.  Folder with case files: C:\RTC
+  Suite 8 enabled: YES.  Name: Suite 8.  Folder with case files: C:\RTC
+  Suite 9 enabled: YES.  Name: Suite 9.  Folder with case files: C:\RTC
+  Suite 10 enabled: YES.  Name: Suite 10.  Folder with case files: C:\RTC
+  Suite 11 enabled: YES.  Name: Suite 11.  Folder with case files: C:\RTC
+  Suite 12 enabled: YES.  Name: Suite 12.  Folder with case files: C:\RTC
+  Suite 13 enabled: YES.  Name: Suite 13.  Folder with case files: C:\RTC
+  Suite 14 enabled: YES.  Name: Suite 14.  Folder with case files: C:\RTC
+  Suite 15 enabled: YES.  Name: Suite 15.  Folder with case files: C:\RTC
+  Suite 16 enabled: YES.  Name: Suite 16.  Folder with case files: C:\RTC
+  Suite 17 enabled: YES.  Name: Suite 17.  Folder with case files: C:\RTC
+  Suite 18 enabled: YES.  Name: Suite 18.  Folder with case files: C:\RTC
+  Suite 19 enabled: YES.  Name: Suite 19.  Folder with case files: C:\RTC
+  Suite 20 enabled: YES.  Name: Suite 20.  Folder with case files: C:\RTC
+  Suite 21 enabled: YES.  Name: Suite 21.  Folder with case files: C:\RTC
+  Suite 22 enabled: YES.  Name: Suite 22.  Folder with case files: C:\RTC
+  Suite 23 enabled: YES.  Name: Suite 23.  Folder with case files: C:\RTC
+  Suite 24 enabled: YES.  Name: Suite 24.  Folder with case files: C:\RTC
+  Suite 25 enabled: YES.  Name: Suite 25.  Folder with case files: C:\RTC
+  Suite 26 enabled: YES.  Name: Suite 26.  Folder with case files: C:\RTC
+  Suite 27 enabled: YES.  Name: Suite 27.  Folder with case files: C:\RTC
+  Suite 28 enabled: YES.  Name: Suite 28.  Folder with case files: C:\RTC
+  Suite 29 enabled: YES.  Name: Suite 29.  Folder with case files: C:\RTC
+  Suite 30 enabled: YES.  Name: Suite 30.  Folder with case files: C:\RTC
+  Suite 31 enabled: YES.  Name: Suite 31.  Folder with case files: C:\RTC
+  Suite 32 enabled: YES.  Name: Suite 32.  Folder with case files: C:\RTC
+  Suite 33 enabled: YES.  Name: Suite 33.  Folder with case files: C:\RTC
+  Suite 34 enabled: YES.  Name: Suite 34.  Folder with case files: C:\RTC
+  Suite 35 enabled: YES.  Name: Suite 35.  Folder with case files: C:\RTC
+  Suite 36 enabled: YES.  Name: Suite 36.  Folder with case files: C:\RTC
+  Suite 37 enabled: YES.  Name: Suite 37.  Folder with case files: C:\RTC
+  Suite 38 enabled: YES.  Name: Suite 38.  Folder with case files: C:\RTC
+  Suite 39 enabled: YES.  Name: Suite 39.  Folder with case files: C:\RTC
+  Suite 40 enabled: YES.  Name: Suite 40.  Folder with case files: C:\RTC
+  Suite 41 enabled: YES.  Name: Suite 41.  Folder with case files: C:\RTC
+  Suite 42 enabled: YES.  Name: Suite 42.  Folder with case files: C:\RTC
+  Suite 43 enabled: YES.  Name: Suite 43.  Folder with case files: C:\RTC
+  Suite 44 enabled: YES.  Name: Suite 44.  Folder with case files: C:\RTC
+  Suite 45 enabled: YES.  Name: Suite 45.  Folder with case files: C:\RTC
+  Suite 46 enabled: YES.  Name: Suite 46.  Folder with case files: C:\RTC
+  Suite 47 enabled: YES.  Name: Suite 47.  Folder with case files: C:\RTC
+  Suite 48 enabled: YES.  Name: Suite 48.  Folder with case files: C:\RTC
+  Suite 49 enabled: YES.  Name: Suite 49.  Folder with case files: C:\RTC
+  Suite 50 enabled: YES.  Name: Suite 50.  Folder with case files: C:\RTC
+  Suite 51 enabled: YES.  Name: Suite 51.  Folder with case files: C:\RTC
+  Suite 52 enabled: YES.  Name: Suite 52.  Folder with case files: C:\RTC
+  Suite 53 enabled: YES.  Name: Suite 53.  Folder with case files: C:\RTC
+  Suite 54 enabled: YES.  Name: Suite 54.  Folder with case files: C:\RTC
+  Suite 55 enabled: YES.  Name: Suite 55.  Folder with case files: C:\RTC
+  Suite 56 enabled: YES.  Name: Suite 56.  Folder with case files: C:\RTC
+  Suite 57 enabled: YES.  Name: Suite 57.  Folder with case files: C:\RTC
+  Suite 58 enabled: YES.  Name: Suite 58.  Folder with case files: C:\RTC
+  Suite 59 enabled: YES.  Name: Suite 59.  Folder with case files: C:\RTC
+  Suite 60 enabled: YES.  Name: Suite 60.  Folder with case files: C:\RTC
+
+  The requested display INTRODUCTION is valid.  Current screen: INTRODUCTION
+
+  The requested display INTRODUCTION is valid.  Current screen: INTRODUCTION
+  Suite 1 enabled: YES.  Name: Suite 1.  Folder with case files: C:\RTC\Mulin_Test
+  Suite 2 enabled: YES.  Name: Suite 2.  Folder with case files: C:\RTC
+  Suite 3 enabled: YES.  Name: Suite 3.  Folder with case files: C:\RTC
+  Suite 4 enabled: YES.  Name: Suite 4.  Folder with case files: C:\RTC
+  Suite 5 enabled: YES.  Name: Suite 5.  Folder with case files: C:\RTC
+  Suite 6 enabled: YES.  Name: Suite 6.  Folder with case files: C:\RTC
+  Suite 7 enabled: YES.  Name: Suite 7.  Folder with case files: C:\RTC
+  Suite 8 enabled: YES.  Name: Suite 8.  Folder with case files: C:\RTC
+  Suite 9 enabled: YES.  Name: Suite 9.  Folder with case files: C:\RTC
+  Suite 10 enabled: YES.  Name: Suite 10.  Folder with case files: C:\RTC
+  Suite 11 enabled: YES.  Name: Suite 11.  Folder with case files: C:\RTC
+  Suite 12 enabled: YES.  Name: Suite 12.  Folder with case files: C:\RTC
+  Suite 13 enabled: YES.  Name: Suite 13.  Folder with case files: C:\RTC
+  Suite 14 enabled: YES.  Name: Suite 14.  Folder with case files: C:\RTC
+  Suite 15 enabled: YES.  Name: Suite 15.  Folder with case files: C:\RTC
+  Suite 16 enabled: YES.  Name: Suite 16.  Folder with case files: C:\RTC
+  Suite 17 enabled: YES.  Name: Suite 17.  Folder with case files: C:\RTC
+  Suite 18 enabled: YES.  Name: Suite 18.  Folder with case files: C:\RTC
+  Suite 19 enabled: YES.  Name: Suite 19.  Folder with case files: C:\RTC
+  Suite 20 enabled: YES.  Name: Suite 20.  Folder with case files: C:\RTC
+  Suite 21 enabled: YES.  Name: Suite 21.  Folder with case files: C:\RTC
+  Suite 22 enabled: YES.  Name: Suite 22.  Folder with case files: C:\RTC
+  Suite 23 enabled: YES.  Name: Suite 23.  Folder with case files: C:\RTC
+  Suite 24 enabled: YES.  Name: Suite 24.  Folder with case files: C:\RTC
+  Suite 25 enabled: YES.  Name: Suite 25.  Folder with case files: C:\RTC
+  Suite 26 enabled: YES.  Name: Suite 26.  Folder with case files: C:\RTC
+  Suite 27 enabled: YES.  Name: Suite 27.  Folder with case files: C:\RTC
+  Suite 28 enabled: YES.  Name: Suite 28.  Folder with case files: C:\RTC
+  Suite 29 enabled: YES.  Name: Suite 29.  Folder with case files: C:\RTC
+  Suite 30 enabled: YES.  Name: Suite 30.  Folder with case files: C:\RTC
+  Suite 31 enabled: YES.  Name: Suite 31.  Folder with case files: C:\RTC
+  Suite 32 enabled: YES.  Name: Suite 32.  Folder with case files: C:\RTC
+  Suite 33 enabled: YES.  Name: Suite 33.  Folder with case files: C:\RTC
+  Suite 34 enabled: YES.  Name: Suite 34.  Folder with case files: C:\RTC
+  Suite 35 enabled: YES.  Name: Suite 35.  Folder with case files: C:\RTC
+  Suite 36 enabled: YES.  Name: Suite 36.  Folder with case files: C:\RTC
+  Suite 37 enabled: YES.  Name: Suite 37.  Folder with case files: C:\RTC
+  Suite 38 enabled: YES.  Name: Suite 38.  Folder with case files: C:\RTC
+  Suite 39 enabled: YES.  Name: Suite 39.  Folder with case files: C:\RTC
+  Suite 40 enabled: YES.  Name: Suite 40.  Folder with case files: C:\RTC
+  Suite 41 enabled: YES.  Name: Suite 41.  Folder with case files: C:\RTC
+  Suite 42 enabled: YES.  Name: Suite 42.  Folder with case files: C:\RTC
+  Suite 43 enabled: YES.  Name: Suite 43.  Folder with case files: C:\RTC
+  Suite 44 enabled: YES.  Name: Suite 44.  Folder with case files: C:\RTC
+  Suite 45 enabled: YES.  Name: Suite 45.  Folder with case files: C:\RTC
+  Suite 46 enabled: YES.  Name: Suite 46.  Folder with case files: C:\RTC
+  Suite 47 enabled: YES.  Name: Suite 47.  Folder with case files: C:\RTC
+  Suite 48 enabled: YES.  Name: Suite 48.  Folder with case files: C:\RTC
+  Suite 49 enabled: YES.  Name: Suite 49.  Folder with case files: C:\RTC
+  Suite 50 enabled: YES.  Name: Suite 50.  Folder with case files: C:\RTC
+  Suite 51 enabled: YES.  Name: Suite 51.  Folder with case files: C:\RTC
+  Suite 52 enabled: YES.  Name: Suite 52.  Folder with case files: C:\RTC
+  Suite 53 enabled: YES.  Name: Suite 53.  Folder with case files: C:\RTC
+  Suite 54 enabled: YES.  Name: Suite 54.  Folder with case files: C:\RTC
+  Suite 55 enabled: YES.  Name: Suite 55.  Folder with case files: C:\RTC
+  Suite 56 enabled: YES.  Name: Suite 56.  Folder with case files: C:\RTC
+  Suite 57 enabled: YES.  Name: Suite 57.  Folder with case files: C:\RTC
+  Suite 58 enabled: YES.  Name: Suite 58.  Folder with case files: C:\RTC
+  Suite 59 enabled: YES.  Name: Suite 59.  Folder with case files: C:\RTC
+  Suite 60 enabled: YES.  Name: Suite 60.  Folder with case files: C:\RTC
+
+ Writing the input file: C:\RTC\MULIN_TEST\MyFirstCase.INPUT                                                                                                                                                                                                                                                                     
+
+
+ Writing the option file: C:\RTC\MULIN_TEST\MyFirstCase.OPTION                                                                                                                                                                                                                                                                   
+
+ Writing the label file: C:\RTC\MULIN_TEST\MyFirstCase.LABEL                                                                                                                                                                                                                                                                     
+
+ Writing the environmental zone file: C:\RTC\MULIN_TEST\MyFirstCase.ENVIRONMENT                                                                                                                                                                                                                                                  
+
+ Writing the division file: C:\RTC\MULIN_TEST\MyFirstCase.DIVISION                                                                                                                                                                                                                                                               
+
+ Writing the crew roster file: C:\RTC\MULIN_TEST\MyFirstCase.CREW                                                                                                                                                                                                                                                                
+
+ Writing the node file: C:\RTC\MULIN_TEST\MyFirstCase.NODE                                                                                                                                                                                                                                                                       
+   Not all nodes written are numeric.
+
+ Writing the link file: C:\RTC\MULIN_TEST\MyFirstCase.LINK                                                                                                                                                                                                                                                                       
+
+ Writing the equation file: C:\RTC\MULIN_TEST\MyFirstCase.EQUATION                                                                                                                                                                                                                                                               
+
+ Writing the line file: C:\RTC\MULIN_TEST\MyFirstCase.LINE                                                                                                                                                                                                                                                                       
+
+ Writing the signal aspect definition file: C:\RTC\MULIN_TEST\MyFirstCase.ASPECT                                                                                                                                                                                                                                                 
+ 
+    1   Name: Clear                        1     0     0     0                                                                                  
+    2   Name: Div clear                    2     0     0     0                                                                                  
+    3   Name: Approach 60                  3     0     0     0                                                                                  
+    4   Name: Div approach 60              4     0     0     0                                                                                  
+    5   Name: Approach 50/40               5     0     0     0                                                                                  
+    6   Name: Div approach 50/40           6     0     0     0                                                                                  
+    7   Name: Approach 40/30               7     0     0     0                                                                                  
+    8   Name: Div approach 40/30           8     0     0     0                                                                                  
+    9   Name: Restricting 20               9     0     0     0                                                                                  
+   10   Name: Div restricting 20          10     0     0     0                                                                                  
+   11   Name: Stop and proceed            11     0     0     0                                                                                  
+   12   Name: Stop                        12     0     0     0                                                                                  
+ 
+ 
+                          Name: Clear                       1
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Div clear                   2
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Approach 60                 3
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Div approach 60             4
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Approach 50/40              5
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Div approach 50/40          6
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Approach 40/30              7
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Div approach 40/30          8
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Restricting 20              9
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Div restricting 20         10
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Stop and proceed           11
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+                          Name: Stop                       12
+     Trailing diverging aspect:                                     0                             
+ Trailing non-diverging aspect:                                     0                             
+    Trailing permissive aspect:                                     0                             
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Writing the signal block definition file: C:\RTC\MULIN_TEST\MyFirstCase.SIGNAL                                                                                                                                                                                                                                                  
+
+ Writing the track permit file: C:\RTC\MULIN_TEST\MyFirstCase.PERMIT                                                                                                                                                                                                                                                             
+
+ Writing the railway location file: C:\RTC\MULIN_TEST\MyFirstCase.LOCATION                                                                                                                                                                                                                                                       
+
+ Writing the track occupancy file: C:\RTC\MULIN_TEST\MyFirstCase.TOC                                                                                                                                                                                                                                                             
+
+ Writing the locomotive file: C:\RTC\MULIN_TEST\MyFirstCase.LOCO                                                                                                                                                                                                                                                                 
+
+ Writing the run-times file: C:\RTC\MULIN_TEST\MyFirstCase.RUNTIMES                                                                                                                                                                                                                                                              
+
+ Writing the train file: C:\RTC\MULIN_TEST\MyFirstCase.TRAIN                                                                                                                                                                                                                                                                     
+
+ Writing the interlocking pair file: C:\RTC\MULIN_TEST\MyFirstCase.IP                                                                                                                                                                                                                                                            
+
+ The case: MyFirstCase has been saved to disk successfully                                                                                                                                                                                                                                                                       
+
+
+  Network changes = NO 
+  Signal changes = NO 
+  Train changes = NO 
+
+
+  RTC 76V  (64-bit 08 May 2023   18:49:34)     Case: MyFirstCase 23MC     13 June 2023   18:28:44
+
+
+    #                  Routine name          Seconds      Calls 
+  -------------------------------------------------------------
+
+  The requested display INTRODUCTION is valid.  Current screen: INTRODUCTION
+
+  The requested display INTRODUCTION is valid.  Current screen: INTRODUCTION
+
+  Network changes = NO 
+  Signal changes = NO 
+  Train changes = NO 
+

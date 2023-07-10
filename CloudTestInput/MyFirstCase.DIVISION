@@ -1,0 +1,6 @@
+ ------------------------------- R T C   76V    D I V I S I O N    F I L E -------------------------------------------------------------------------------------------------------------------------------------------------------------
+                              M   Div                                            Sub        Low        High                               RTC   Field   Include    Hotel               Wayside   Ascending
+                              /   RTC                          Abbrev   Node     RTC       Field       Field       Conversion factors      to     to      in       Power    PTC CP     Signals  Field Marker   Ascending     Descending
+        Division              E  Color   Subdivision           -ation  Prefix   Color      Marker      Marker       A               B    Field   RTC    Reports?     KW   Designator   Enabled   Direction     Tail Node      Tail Node
+ -xxx---xxxxxxxxxxxxxxxxxxxx--x----xx----xxxxxxxxxxxxxxxxxxxx---xxxxx---xxxxx-----xx-----xxxx.xxx----xxxx.xxx---xxx.xxx--xxxxxxxxxx.xxx----x------x--------x------xxxx.x-------x----------x----------x-------xxxxxxxxxxxx---xxxxxxxxxxxx
+    1   Bay                   E    15    Ivy                    BV      BV        12        0.000     100.000     1.000           0.000    Y      Y        Y         0.0       P          Y                                             
