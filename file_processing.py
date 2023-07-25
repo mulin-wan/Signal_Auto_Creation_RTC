@@ -1,7 +1,6 @@
 import os
-from tkinter import messagebox
-import numpy as np
 import re
+from tkinter import messagebox
 
 def read_signal_file(file_path):
     with open(file_path, 'r') as file:
@@ -19,6 +18,98 @@ def read_signal_file(file_path):
             signals.append(signal)
     del signals[0]
     return signals
+
+def read_node_file(file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+        nodes = []
+        node = []
+        for line in lines[10:]:
+            if node:  # If there's an existing node, append it to the list
+                nodes.append(node)
+                node = []  # Initialize a new node
+            else:
+                node.append(line)  # Add the line to the node content
+        # Append the last node if it hasn't been appended yet
+        if node:
+            nodes.append(node)
+    return nodes
+
+def read_link_file(file_path):
+    with open(file_path, 'r') as file:
+        links = {}
+        lines = file.readlines
+        for line in lines[10:]:
+            line = line.split()
+            if not line:
+                continue
+            links[line[0]] = line[1:]
+    return links
+
+def signal_dict(file_path):
+    signals_list = read_signal_file(file_path)
+    signals = []
+
+    for signal in signals_list:
+        signal_dict = {}
+        affected_blocks = []
+        num_affected_blocks = None
+        for line in signal:
+            # Skip the line if it's just hyphens or whitespace
+            if line.strip() == '' or line.startswith('-' * 66):
+                continue
+            # Split the line into segments by multiple spaces
+            segments = re.split(r'\s{2,}', line.strip())
+            for segment in segments:
+                # Partition each segment into key-value pair
+                key, _, value = segment.partition(":")
+                key = key.strip()
+                value = value.strip()
+
+                if key == 'SORS exception distance':
+                    # Extract the value from the correct position
+                    value = line.split(':')[1].split()[0]
+                elif key == 'Number of affected blocks':
+                    # Extract the value from the correct position
+                    value = line.split(':')[1].split()[0]
+                    num_affected_blocks = int(value) if value else 0
+                    print(num_affected_blocks)
+                if num_affected_blocks is not None and key == 'Begin':
+                    # We're in the affected blocks section
+                    affected_blocks.append({key: value})
+                else:
+                    signal_dict[key] = value
+
+            # If we're in the affected blocks section and have read all affected blocks, reset the counter
+            if num_affected_blocks is not None and len(affected_blocks) == num_affected_blocks:
+                signal_dict['Affected Blocks'] = affected_blocks
+                num_affected_blocks = None
+
+        signals.append(signal_dict)
+
+    return signals
+
+def link_dict(filename):
+    links = {}
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+        for line in lines[12:]:
+            columns = re.split(r'\s\s+', line.strip())
+            origin_node, destination_node, bool_list = columns[:3]
+            origin_milepost = float(origin_node[2:])  # get milepost from origin node
+            destination_milepost = float(destination_node[2:])  # get milepost from destination node
+            direction = bool_list[4]
+            next_node_1 = columns[5] if '_' in columns[5] else None
+            next_node_2 = columns[6] if '_' in columns[6] else None
+
+            links[line] = {
+                "origin_node": origin_node,
+                "destination_node": destination_node,
+                "direction": direction,
+                "next_node_1": next_node_1,
+                "next_node_2": next_node_2
+            }
+    return links
 
 # Filter the signal between the inputed milepost range
 def filter_signals(signals, block_length, milepost_begin, milepost_end):
@@ -42,6 +133,14 @@ def filter_signals(signals, block_length, milepost_begin, milepost_end):
                     filtered_signals.append(signal)
     return filtered_signals
 
+def switch(signals, links):
+    for line in links:
+        if links[line]["next_node_2"] is not None:
+            for signal in signals:
+                if links[line]["origin_node"] not in signal["Begin"]:
+# TODO:
+                    return 0
+
 def process_files(directory, experiment, block_length, milepost_begin, milepost_end):
     folder_path = str(directory)
     experiment_name = str(experiment)
@@ -56,17 +155,18 @@ def process_files(directory, experiment, block_length, milepost_begin, milepost_
     
     if os.path.exists(signal_file):
         signals = read_signal_file(signal_file)
+        nodes = read_node_file(node_file)
+        links = link_dict(link_file)
         filtered_signals = filter_signals(signals, block_length, milepost_begin, milepost_end)
         # Example usage:
         save_filtered_signals(filtered_signals, experiment_name + '.SIGNAL')
+        signals_dict = signal_dict(signal_file)
         # TODO: modify signals based on milepost_ranges and other criteria
     else:
         signals = []
-    # TODO: write signals back to the signal file
 
     # TODO: read and process node and link files, similar to how we processed the signal file
-    
-    #print_signal(signals, 210)
+
     messagebox.showinfo("Success", "Signal processing completed successfully")
 
 def save_filtered_signals(filtered_signals, file_path):
