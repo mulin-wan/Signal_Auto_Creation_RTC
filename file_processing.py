@@ -1,5 +1,6 @@
 import os
 import re
+import pandas as pd
 from tkinter import messagebox
 
 def read_signal_file(file_path):
@@ -46,18 +47,15 @@ def read_link_file(file_path):
             links[line[0]] = line[1:]
     return links
 
-def signal_dict(file_path):
-    signals_list = read_signal_file(file_path)
-    signals = []
-
-    for signal in signals_list:
-        signal_dict = {}
-        affected_blocks = []
-        num_affected_blocks = None
-        for line in signal:
+def single_signal_dict(signal):
+    signal_dict = {}
+    affected_blocks = []
+    num_affected_blocks = None
+    for line in signal:
             # Skip the line if it's just hyphens or whitespace
             if line.strip() == '' or line.startswith('-' * 66):
                 continue
+            signal_dict['hyphens line'] = '-' * 66
             # Split the line into segments by multiple spaces
             segments = re.split(r'\s{2,}', line.strip())
             for segment in segments:
@@ -65,15 +63,31 @@ def signal_dict(file_path):
                 key, _, value = segment.partition(":")
                 key = key.strip()
                 value = value.strip()
-
-                if key == 'SORS exception distance':
-                    # Extract the value from the correct position
-                    value = line.split(':')[1].split()[0]
-                elif key == 'Number of affected blocks':
-                    # Extract the value from the correct position
-                    value = line.split(':')[1].split()[0]
-                    num_affected_blocks = int(value) if value else 0
-                    print(num_affected_blocks)
+                match key:
+                    case 'Latency time (MM':
+                        key = 'Latency time (MM:SS):'
+                        value = line.split(':', 3)[3]  # Split at the second ":" 
+                        value = value + '\n'
+                    case 'SORS exception distance':
+                        # Extract the value from the correct position
+                        value = line.split(':')[2].split()[0] 
+                        value = value + '\n'
+                    case 'Number of affected blocks':
+                        # Extract the value from the correct position
+                        value = line.split(':')[1].split()[0]
+                        num_affected_blocks = int(value) if value else 0
+                    case 'Speed release':
+                        value = value + '\n'
+                    case 'Enabled':
+                        value = value + '\n'
+                    case 'Check favorable aspects for divergence':
+                        value = value + '\n'
+                    case 'Virtual':
+                        value = value + '\n'
+                    case 'Suppress warnings':
+                        value = value + '\n'
+                    case 'Allow guessing':
+                        value = value + '\n'
                 if num_affected_blocks is not None and key == 'Begin':
                     # We're in the affected blocks section
                     affected_blocks.append({key: value})
@@ -85,9 +99,10 @@ def signal_dict(file_path):
                 signal_dict['Affected Blocks'] = affected_blocks
                 num_affected_blocks = None
 
-        signals.append(signal_dict)
+    return signal_dict
 
-    return signals
+def signal_dict(signals_list):
+    return [single_signal_dict(signal) for signal in signals_list]
 
 def link_dict(filename):
     links = {}
@@ -136,10 +151,21 @@ def filter_signals(signals, block_length, milepost_begin, milepost_end):
 def switch(signals, links):
     for line in links:
         if links[line]["next_node_2"] is not None:
+            found = False  # flag to check if the origin_node exists in any signal
             for signal in signals:
-                if links[line]["origin_node"] not in signal["Begin"]:
-# TODO:
-                    return 0
+                if links[line]["origin_node"] == signal["Begin"]:
+                    if links[line]["destination_node"] == signal["End"]:
+                        found = True
+                    break
+            if not found:  # if the origin_node was not found in any signal
+                # create a new signal with the necessary fields
+                new_signal = {
+                    "Begin": links[line]["origin_node"],
+                    "End": links[line]["destination_node"],
+                    # add any other necessary fields here, with appropriate default values
+                }
+                signals.append(new_signal)  # add the new signal to the list of signals
+    return signals  # return the updated list of signals
 
 def process_files(directory, experiment, block_length, milepost_begin, milepost_end):
     folder_path = str(directory)
@@ -152,7 +178,6 @@ def process_files(directory, experiment, block_length, milepost_begin, milepost_
     signal_file = os.path.join(folder_path, experiment_name + '.signal')
     node_file = os.path.join(folder_path, experiment_name + '.node')
     link_file = os.path.join(folder_path, experiment_name + '.link')
-    
     if os.path.exists(signal_file):
         signals = read_signal_file(signal_file)
         nodes = read_node_file(node_file)
@@ -160,8 +185,10 @@ def process_files(directory, experiment, block_length, milepost_begin, milepost_
         filtered_signals = filter_signals(signals, block_length, milepost_begin, milepost_end)
         # Example usage:
         save_filtered_signals(filtered_signals, experiment_name + '.SIGNAL')
-        signals_dict = signal_dict(signal_file)
-        # TODO: modify signals based on milepost_ranges and other criteria
+        signals_dict = signal_dict(filtered_signals)  # Use filtered_signals as input
+        # Modify signals based on milepost_ranges and other criteria
+        updated_signals_dict = switch(signals_dict, links)  # Add new signals to signals_dict
+        save_signal_dict(updated_signals_dict, experiment_name + '.SIGNALL')  # Save updated signals
     else:
         signals = []
 
@@ -179,3 +206,11 @@ def save_filtered_signals(filtered_signals, file_path):
                 file.write(''.join(line))  # Join the elements of line into a single string and write it to the file
             if i < len(filtered_signals) - 1:  # If this is not the last signal
                 file.write('\n')  # Add separator between signals
+
+def save_signal_dict(signals_dict, file_path):
+    with open(file_path, "w") as file:
+        file.write(' ------------------------------------- R T C   76V    S I G N A L    F I L E ----------------------------------------------------------------------------------------------------------------------\n\n')
+        if signals_dict is None:
+            return
+        for line in signals_dict:
+            file.write(str(line))
